@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="591ce759-2a5f-44e7-89f5-00b6248365e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/CMS.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/assert.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/async_hooks.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/base.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/buffer.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/child_process.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/cluster.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/console.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/constants.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/crypto.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/dgram.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/dns.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/domain.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/events.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/fs.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/globals.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/http.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/http2.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/https.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/inspector.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/net.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/os.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/path.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/perf_hooks.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/process.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/punycode.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/querystring.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/readline.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/repl.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/stream.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/string_decoder.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/timers.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/tls.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/trace_events.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/ts3.2/fs.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/ts3.2/globals.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/ts3.2/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/ts3.2/util.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/tty.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/url.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/util.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/v8.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/vm.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/worker_threads.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/@types/node/zlib.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/assert-options/dist/src/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/assert-options/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/cookie-parser/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/cookie-parser/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/cors/lib/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/cors/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/debug/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/debug/node.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/debug/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/debug/src/browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/debug/src/debug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/debug/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/debug/src/inspector-log.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/debug/src/node.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/dotenv/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/dotenv/types/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/dotenv/types/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/express/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/express/lib/application.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/express/lib/express.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/express/lib/middleware/init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/express/lib/middleware/query.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/express/lib/request.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/express/lib/response.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/express/lib/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/express/lib/router/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/express/lib/router/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/express/lib/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/express/lib/view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/express/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/http-errors/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/http-errors/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/bin/jade.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/jade.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/compiler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/doctypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/filters-client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/filters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/inline-tags.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/lexer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/attrs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/block-comment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/block.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/case.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/comment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/doctype.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/each.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/filter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/literal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/mixin-block.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/mixin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/node.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/tag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/nodes/text.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/parser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/runtime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/release.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/jade/runtime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/moment/moment.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/moment/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/morgan/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/morgan/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg-minify/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg-minify/typescript/pg-minify.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg-promise/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg-promise/typescript/pg-promise.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg-promise/typescript/pg-subset.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg/lib/client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg/lib/connection-parameters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg/lib/connection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg/lib/defaults.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg/lib/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg/lib/native/client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg/lib/native/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg/lib/native/query.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg/lib/query.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg/lib/result.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg/lib/sasl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg/lib/type-overrides.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg/lib/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/pg/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/associations/base.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/associations/belongs-to-many.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/associations/belongs-to.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/associations/has-many.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/associations/has-one.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/associations/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/connection-manager.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/data-types.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/deferrable.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/errors.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/hooks.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/index-hints.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/instance-validator.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/model-manager.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/model.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/operators.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/promise.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/query-interface.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/query-types.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/sequelize.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/sql-string.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/table-hints.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/transaction.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/utils.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/utils/logger.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/sequelize/types/lib/utils/validator-extras.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/spex/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/spex/typescript/spex.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/wkx/lib/wkx.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/node_modules/wkx/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/TestApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\TOMb\Desktop\CMS\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TJWex3yqT31t5lUf5IIVUIDhmg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/model" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TOMb\Desktop\CMS\backend\model" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="591ce759-2a5f-44e7-89f5-00b6248365e3" name="Default Changelist" comment="" />
+      <created>1573178777149</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573178777149</updated>
+      <workItem from="1573178778790" duration="1885000" />
+      <workItem from="1573181997861" duration="8984000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
