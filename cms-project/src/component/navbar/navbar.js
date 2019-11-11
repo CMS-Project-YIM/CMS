@@ -86,7 +86,7 @@ class navbar extends Component {
                     <Layout >
                         <div className="allSide">
                             
-                                <Chartline />
+                              {/* ใส่page */}
                             
                         </div>
                         {/* <Breadcrumb style={{ margin: '16px 0' }}>
