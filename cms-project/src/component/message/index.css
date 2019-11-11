@@ -1,8 +1,9 @@
 .SiderContainer{
-    /* position: fixed; */
+    position: fixed;
     z-index: 1500;
     height: 100vh;
     opacity: 0.9;
+    background-color: brown;
 }
 
 .ContentContainer{
