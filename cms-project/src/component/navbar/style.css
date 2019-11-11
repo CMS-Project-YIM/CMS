@@ -29,11 +29,14 @@
 }
 .allSide{
     position: relative;
-    background-color:grey;
+    background-color:rgb(228, 241, 254);
     width: auto;
     height: auto;
     min-width: 100em;
     overflow-x: hidden;
     overflow-y: auto; 
     min-height: 100em;
+}
+.sider{
+    background-color:red;
 }

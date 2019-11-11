@@ -1,12 +1,15 @@
 import React, { PropTypes, Component } from 'react';
 import './style.css';
-import 'antd/dist/antd.css';
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+// import 'antd/dist/antd.css';
+import { Layout, Menu, Button, Icon } from 'antd';
 import Login from '../login/login';
+import Chartbar from '../chart/chartbar';
+import Chartline from '../chart/chartline';
+
 
 
 const { SubMenu } = Menu;
-const { Content, Sider } = Layout;
+const {  Sider } = Layout;
 
 class navbar extends Component {
     render() {
@@ -15,8 +18,8 @@ class navbar extends Component {
 
                 <div className="header">
                     <h2 className="textheader">welcome to react</h2>
-                    <h2 className="textheader2">login</h2>
-                    <h2 className="textheader2">home</h2>
+                    <Button type="link" className="textheader2" a href ="/login">Logout</Button>
+                   
                 </div>
 
 
@@ -32,7 +35,7 @@ class navbar extends Component {
         </Menu> */}
             
                 <Layout className="sidebar">
-                    <Sider width={200}>
+                    <Sider width={200} className ="sider">
                         <Menu 
                             theme="black"       //สีเวลาชี้
                             mode="inline"     //ตัวเลือกจะโผล่ทางไหน
@@ -82,7 +85,9 @@ class navbar extends Component {
                     </Sider>
                     <Layout >
                         <div className="allSide">
-                            <Login />
+                            
+                                <Chartline />
+                            
                         </div>
                         {/* <Breadcrumb style={{ margin: '16px 0' }}>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
