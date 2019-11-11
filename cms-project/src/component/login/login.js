@@ -52,33 +52,33 @@ class login extends Component {
                         </h2>
 
                         <div className="fromlogin">
-                            <form onSubmit={this.onSubmit}>
-                                <div>
-                                    <div className="fontinput">Email</div>
-                                    <Input
-                                        prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                                        type ="email"
-                                        placeholder="Email"
-                                        name="email"
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-                                <div>
-                                    <div className="fontinput">Password</div>
-                                    <Input
-                                        prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                                        type="password"
-                                        placeholder="Password"
-                                        name="passwprd"
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-                                <Button a href="/navbar" className="buttonlogin" type="primary" htmlType="submit" onClick={this.login}>
-                                    submit
+                            {/* <form onSubmit={this.onSubmit}> */}
+                            <div>
+                                <div className="fontinput">Email</div>
+                                <Input
+                                    prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                                    type="email"
+                                    placeholder="Email"
+                                    name="email"
+                                // onChange={this.onChange}
+                                />
+                            </div>
+                            <div>
+                                <div className="fontinput">Password</div>
+                                <Input
+                                    prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                                    type="password"
+                                    placeholder="Password"
+                                    name="passwprd"
+                                // onChange={this.onChange}
+                                />
+                            </div>
+                            <Button a href="/navbar" className="buttonlogin" type="primary" htmlType="submit" onClick={this.login}>
+                                submit
                                 </Button>
 
-                                
-                            </form>
+
+                            {/* </form> */}
                         </div>
                     </div>
                 </div>
