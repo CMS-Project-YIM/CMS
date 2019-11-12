@@ -21,13 +21,12 @@
   height: 60px;
   z-index: 1500;
 }
-.sildebar {
-  position: fixed;
-  top: 60px;
-  z-index: 1500;
-}
+
 .sider {
   background-color: rgb(52, 73, 94);
+  position: fixed;
+  top: 60px;
+  width: 200px;
 }
 .submenu {
   background-color: #bcd5f3;
@@ -45,4 +44,5 @@
   overflow-x: hidden;
   overflow-y: auto;
   min-height: 100em;
+  margin-top: 60px;
 }
