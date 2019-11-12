@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import "./style.css";
 import { Layout, Menu, Button, Icon } from "antd";
+
 import Chart from "./dashborad";
+
+import { Link } from "react-router";
 
 const { SubMenu } = Menu;
 const { Sider } = Layout;
@@ -15,11 +18,9 @@ class Chartindex extends Component {
           <Button type="link" className="textheader2" a href="/login">
             Logout
           </Button>
-
           <h2 className="textheader2">Username</h2>
         </div>
-
-        <Layout className="slidebar">
+        <Layout className="sildebar">
           <Sider width={200}>
             <Menu
               className="sider"
@@ -45,7 +46,6 @@ class Chartindex extends Component {
                   option2
                 </Menu.Item>
               </SubMenu>
-
               <SubMenu
                 className="submenu"
                 key="sub2"
@@ -56,14 +56,12 @@ class Chartindex extends Component {
                 }
               >
                 <Menu.Item className="optionmenu" key="5">
-                  option5
+                  <Link to="/navbar"> navbar</Link>
                 </Menu.Item>
-
                 <Menu.Item className="optionmenu" key="6">
-                  Dashborad
+                  <Link to="/chart"> Dashborad</Link>
                 </Menu.Item>
               </SubMenu>
-
               <SubMenu
                 className="submenu"
                 key="sub3"

@@ -1,54 +1,48 @@
-.topMenu{
-    float: right;
-    display: block;
+.topMenu {
+  float: right;
+  display: block;
 }
-.textheader{
-    float: left;
-    font-size: 30px;
-    color: white;
-    margin: 10px 50px; 
+.textheader {
+  float: left;
+  font-size: 30px;
+  color: white;
+  margin: 10px 50px;
 }
-.textheader2{
-    float: right;
-    font-size:20px;
-    color: white;
-    margin: 15px 10px; 
+.textheader2 {
+  float: right;
+  font-size: 20px;
+  color: white;
+  margin: 10px 10px;
 }
-.header{
-    position: fixed;
-    width: 100%;
-    background-color:rgb(46, 49, 49);
-    height: 60px;
-    z-index: 1500;
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(46, 49, 49);
+  height: 60px;
+  z-index: 1500;
 }
-.sildebar{
-    position: fixed;
-    top: 60px;  
-    z-index: 1500;
-    
+.sildebar {
+  position: fixed;
+  top: 60px;
+  z-index: 1500;
 }
-.sider{
-    background-color:rgb(52, 73, 94);
-    
+.sider {
+  background-color: rgb(52, 73, 94);
 }
-.submenu{
-    background-color:#bcd5f3;
-    color: black;  
-    
+.submenu {
+  background-color: #bcd5f3;
+  color: black;
 }
-.optionmenu{
-    background-color:#d4eef1;
-    
-
+.optionmenu {
+  background-color: #d4eef1;
 }
-.allSide{
-    position: relative;
-    background-color:white;
-    width: auto;
-    height: auto;
-    min-width: 100em;
-    overflow-x: hidden;
-    overflow-y: auto; 
-    min-height: 100em;
+.allSide {
+  position: relative;
+  background-color: white;
+  width: auto;
+  height: auto;
+  min-width: 100em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100em;
 }
-

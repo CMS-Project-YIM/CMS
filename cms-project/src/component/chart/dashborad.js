@@ -258,7 +258,7 @@ class Dashboard extends Component {
       <div className="animated fadeIn">
         <div
           class="row"
-          style={{ paddingLeft: 20, paddingTop: 80, paddingRight: 470 }}
+          style={{ paddingLeft: 20, paddingTop: 20, paddingRight: 470 }}
         >
           <div class="col-sm-6">
             <div class="card">
