@@ -1,7 +1,5 @@
 import React from "react";
-import { CustomTooltips } from "@coreui/coreui-plugin-chartjs-custom-tooltips";
 import { Line } from "react-chartjs-2";
-import { Card, CardHeader, CardBody, CardColumns } from "reactstrap";
 
 const line = {
   labels: ["January", "February", "March", "April", "May", "June", "July"],
@@ -30,28 +28,12 @@ const line = {
   ]
 };
 
-const options = {
-  tooltips: {
-    enabled: false,
-    custom: CustomTooltips
-  },
-  maintainAspectRatio: false
-};
-
 class Chartline extends React.Component {
   render() {
     return (
-      <div className="animated fadeIn">
+      <div>
         <div className="chart-wrapper">
-          <CardColumns className="cols-2">
-            <Card>
-              <CardHeader>
-                <CardBody>
-                  <Line data={line} options={options} />
-                </CardBody>
-              </CardHeader>
-            </Card>
-          </CardColumns>
+          <Line data={line} />
         </div>
       </div>
     );
