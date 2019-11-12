@@ -10,8 +10,9 @@
     width: 100%;
     height: 100vh;
     overflow-y: auto;
-    background-image: url(../login/img/107692.jpg);
-    
+    background-image: url(../login/img/309047.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 .title{
     font-size: 50px;
@@ -21,7 +22,7 @@
     font-size: 20px;
 }
 .cardlogin{
-    width: 30%;
+    width: 25%;
     background-color:rgb(52, 73, 94);
     padding: 20px; /*ระยะขอบ*/
     border-radius: 1em;
