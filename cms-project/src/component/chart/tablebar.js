@@ -46,7 +46,7 @@ class Tablebar extends Component {
   render() {
     return (
       <div>
-        <Table columns={columns} dataSource={dataSource} />
+        <Table columns={columns} dataSource={dataSource} bordered />
       </div>
     );
   }
