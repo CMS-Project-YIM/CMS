@@ -21,7 +21,7 @@
     font-size: 20px;
 }
 .cardlogin{
-    width: 25%;
+    width: 30%;
     background-color:rgb(52, 73, 94);
     padding: 20px; /*ระยะขอบ*/
     border-radius: 1em;
@@ -32,7 +32,7 @@
 }
 .buttonlogin{
     margin-top: 20px;
-    width: 30%;
+    width: 35%;
     font-size: 20px;
     background-color:rgb(6, 186, 241);
 }
