@@ -21,7 +21,7 @@ class navbar extends Component {
                      <h2 className="textheader2">Username</h2>
                    
                 </div>
-                <Layout className="sidebar">
+                <Layout className="sildebar">
                     <Sider width={200}>
                         <Menu  className ="sider" 
                             theme ="black"       //สีเวลาชี้
