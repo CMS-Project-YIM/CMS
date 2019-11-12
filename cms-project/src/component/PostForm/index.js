@@ -1,5 +1,6 @@
 import { Form, Row, Col, Input, Button, Select } from "antd";
 import React from "react";
+import UploadForm from "./UploadForm";
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -44,42 +45,53 @@ class PostForm extends React.Component {
   render() {
     const { optionValue } = this.state;
     return (
-      <Form layout="horizontal" onSubmit={this.handleSubmit}>
-        <Row gutter={16}>
-          <Col span={20}>
-            <Form.Item>
-              <Input placeholder="Topic" onChange={this.handleTopic} required />
-            </Form.Item>
-          </Col>
-          <Col span={4}>
-            <Form.Item>
-              <Select
-                onChange={this.handleSelectChange}
-                placeholder="Select Topic Type"
-              >
-                {optionValue.map((item, index) => (
-                  <Option value={item} key={index}>
-                    {item}
-                  </Option>
-                ))}
-              </Select>
-            </Form.Item>
-          </Col>
-        </Row>
-        <Form.Item>
-          <TextArea
-            placeholder="Type Content Here"
-            rows={6}
-            onChange={this.handleTopicContent}
-            required
-          />
-        </Form.Item>
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Post
-          </Button>
-        </Form.Item>
-      </Form>
+      <div>
+        <Form layout="horizontal" onSubmit={this.handleSubmit}>
+          <Row gutter={8}>
+            <Col span={16}>
+              <Form.Item>
+                <Input
+                  placeholder="Topic"
+                  onChange={this.handleTopic}
+                  required
+                />
+              </Form.Item>
+            </Col>
+            <Col span={4}>
+              <Form.Item>
+                <Select
+                  onChange={this.handleSelectChange}
+                  placeholder="Select Topic Type"
+                >
+                  {optionValue.map((item, index) => (
+                    <Option value={item} key={index}>
+                      {item}
+                    </Option>
+                  ))}
+                </Select>
+              </Form.Item>
+            </Col>
+            <Col span={4}>
+              <Form.Item>
+                <UploadForm />
+              </Form.Item>
+            </Col>
+          </Row>
+          <Form.Item>
+            <TextArea
+              placeholder="Type Content Here"
+              rows={6}
+              onChange={this.handleTopicContent}
+              required
+            />
+          </Form.Item>
+          <Form.Item>
+            <Button type="primary" htmlType="submit">
+              Post
+            </Button>
+          </Form.Item>
+        </Form>
+      </div>
     );
   }
 }
