@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+<<<<<<< HEAD
 import { Line } from "react-chartjs-2";
 import Tablebar from "./tablebar";
 import Chartbar from "./chartbar";
@@ -9,244 +10,19 @@ import { Badge, Card, CardBody, CardHeader, Progress } from "reactstrap";
 import { Row, Col } from "antd";
 import { CustomTooltips } from "@coreui/coreui-plugin-chartjs-custom-tooltips";
 import { getStyle } from "@coreui/coreui/dist/js/coreui-utilities";
+=======
+import "./style.css";
+import { Layout, Menu, Button, Icon } from "antd";
+import Chart from "./dashborad";
+>>>>>>> e690d3e0e66cd35509b94cc6aecbfea451b4c851
 
-const brandPrimary = getStyle("--primary");
-const brandInfo = getStyle("--info");
+const { SubMenu } = Menu;
+const { Sider } = Layout;
 
-// Card Chart 1 Data
-const cardChartData1 = {
-  labels: ["January", "February", "March", "April", "May", "June", "July"],
-  datasets: [
-    {
-      label: "My First dataset",
-      backgroundColor: brandPrimary,
-      borderColor: "rgba(255,255,255,.55)",
-      data: [65, 59, 84, 84, 51, 55, 40]
-    }
-  ]
-};
-const cardChartOpts1 = {
-  tooltips: {
-    enabled: false,
-    custom: CustomTooltips
-  },
-  maintainAspectRatio: false,
-  legend: {
-    display: false
-  },
-  scales: {
-    xAxes: [
-      {
-        gridLines: {
-          color: "transparent",
-          zeroLineColor: "transparent"
-        },
-        ticks: {
-          fontSize: 2,
-          fontColor: "transparent"
-        }
-      }
-    ],
-    yAxes: [
-      {
-        display: false,
-        ticks: {
-          display: false,
-          min: Math.min.apply(Math, cardChartData1.datasets[0].data) - 5,
-          max: Math.max.apply(Math, cardChartData1.datasets[0].data) + 5
-        }
-      }
-    ]
-  },
-  elements: {
-    line: {
-      tension: 0.00001,
-      borderWidth: 1
-    },
-    point: {
-      radius: 4,
-      hitRadius: 10,
-      hoverRadius: 4
-    }
-  }
-};
-
-// Card Chart 2 Data
-const cardChartData2 = {
-  labels: ["January", "February", "March", "April", "May", "June", "July"],
-  datasets: [
-    {
-      label: "My First dataset",
-      backgroundColor: brandInfo,
-      borderColor: "rgba(255,255,255,.55)",
-      data: [1, 18, 9, 17, 34, 22, 11]
-    }
-  ]
-};
-
-const cardChartOpts2 = {
-  tooltips: {
-    enabled: false,
-    custom: CustomTooltips
-  },
-  maintainAspectRatio: false,
-  legend: {
-    display: false
-  },
-  scales: {
-    xAxes: [
-      {
-        gridLines: {
-          color: "transparent",
-          zeroLineColor: "transparent"
-        },
-        ticks: {
-          fontSize: 2,
-          fontColor: "transparent"
-        }
-      }
-    ],
-    yAxes: [
-      {
-        display: false,
-        ticks: {
-          display: false,
-          min: Math.min.apply(Math, cardChartData2.datasets[0].data) - 5,
-          max: Math.max.apply(Math, cardChartData2.datasets[0].data) + 5
-        }
-      }
-    ]
-  },
-  elements: {
-    line: {
-      tension: 0.00001,
-      borderWidth: 1
-    },
-    point: {
-      radius: 4,
-      hitRadius: 10,
-      hoverRadius: 4
-    }
-  }
-};
-
-// Card Chart 3 Data
-const cardChartData3 = {
-  labels: ["January", "February", "March", "April", "May", "June", "July"],
-  datasets: [
-    {
-      label: "My First dataset",
-      backgroundColor: "rgba(255,255,255,.2)",
-      borderColor: "rgba(255,255,255,.55)",
-      data: [78, 81, 80, 45, 34, 12, 40]
-    }
-  ]
-};
-
-const cardChartOpts3 = {
-  tooltips: {
-    enabled: false,
-    custom: CustomTooltips
-  },
-  maintainAspectRatio: false,
-  legend: {
-    display: false
-  },
-  scales: {
-    xAxes: [
-      {
-        display: false
-      }
-    ],
-    yAxes: [
-      {
-        display: false
-      }
-    ]
-  },
-  elements: {
-    line: {
-      borderWidth: 2
-    },
-    point: {
-      radius: 0,
-      hitRadius: 10,
-      hoverRadius: 4
-    }
-  }
-};
-
-// Card Chart 4 Data
-const cardChartData4 = {
-  labels: ["", "", "", "", "", "", "", "", "", "", ""],
-  datasets: [
-    {
-      label: "My First dataset",
-      backgroundColor: "rgba(255,255,255,.3)",
-      borderColor: "transparent",
-      data: [78, 81, 80, 50, 60, 70, 60, 75, 80, 89, 32]
-    }
-  ]
-};
-
-const cardChartOpts4 = {
-  tooltips: {
-    enabled: false,
-    custom: CustomTooltips
-  },
-  maintainAspectRatio: false,
-  legend: {
-    display: false
-  },
-  scales: {
-    xAxes: [
-      {
-        display: false
-      }
-    ],
-    yAxes: [
-      {
-        display: false
-      }
-    ]
-  },
-  elements: {
-    line: {
-      borderWidth: 2
-    },
-    point: {
-      radius: 0,
-      hitRadius: 10,
-      hoverRadius: 4
-    }
-  }
-};
-
-// Main Chart
-
-//Random Numbers
-function random(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-var elements = 27;
-var data1 = [];
-var data2 = [];
-var data3 = [];
-
-for (var i = 0; i <= elements; i++) {
-  data1.push(random(50, 200));
-  data2.push(random(80, 100));
-  data3.push(65);
-}
-
-class Dashboard extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+class Chartindex extends Component {
   render() {
     return (
+<<<<<<< HEAD
       <div className="animated fadeIn">
         <div
           class="row"
@@ -514,8 +290,92 @@ class Dashboard extends Component {
           </div>
         </Col>
       </div>
+=======
+      <Layout>
+        <div className="header">
+          <h2 className="textheader">CMS-Project</h2>
+          <Button type="link" className="textheader2" a href="/login">
+            Logout
+          </Button>
+
+          <h2 className="textheader2">Username</h2>
+        </div>
+
+        <Layout className="slidebar">
+          <Sider width={200}>
+            <Menu
+              className="sider"
+              theme="black" //สีเวลาชี้
+              mode="inline" //ตัวเลือกจะโผล่ทางไหน
+              defaultSelectedKeys={["1"]}
+              defaultOpenKeys={["sub1"]}
+              style={{ height: "100%", borderRight: 0 }}
+            >
+              <SubMenu
+                className="submenu"
+                key="sub1"
+                title={
+                  <span>
+                    <Icon type="user" /> User
+                  </span>
+                }
+              >
+                <Menu.Item className="optionmenu" key="1">
+                  option1
+                </Menu.Item>
+                <Menu.Item className="optionmenu" key="2">
+                  option2
+                </Menu.Item>
+              </SubMenu>
+
+              <SubMenu
+                className="submenu"
+                key="sub2"
+                title={
+                  <span>
+                    <Icon type="laptop" /> Admin
+                  </span>
+                }
+              >
+                <Menu.Item className="optionmenu" key="5">
+                  option5
+                </Menu.Item>
+
+                <Menu.Item className="optionmenu" key="6">
+                  Dashborad
+                </Menu.Item>
+              </SubMenu>
+
+              <SubMenu
+                className="submenu"
+                key="sub3"
+                title={
+                  <span>
+                    <Icon type="notification" />
+                    Editer
+                  </span>
+                }
+              >
+                <Menu.Item className="optionmenu" key="9">
+                  option9
+                </Menu.Item>
+                <Menu.Item className="optionmenu" key="10">
+                  option10
+                </Menu.Item>
+              </SubMenu>
+            </Menu>
+          </Sider>
+
+          <Layout>
+            <div className="allSide">
+              <Chart />
+            </div>
+          </Layout>
+        </Layout>
+      </Layout>
+>>>>>>> e690d3e0e66cd35509b94cc6aecbfea451b4c851
     );
   }
 }
 
-export default Dashboard;
+export default Chartindex;
