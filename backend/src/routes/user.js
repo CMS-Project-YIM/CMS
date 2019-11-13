@@ -11,7 +11,7 @@ router.get('/:userId', async (req, res) => {
   const user = await req.context.models.User.findByPk(
     req.params.userId,
   );
-  return res.send(user);
+  return res.json(user);
 });
 
 export default router;
