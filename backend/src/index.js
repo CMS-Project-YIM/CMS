@@ -5,9 +5,9 @@ import express from 'express';
 
 import models, {sequelize} from './models';
 import routes from './routes';
+var apiUser = require("./routes/user");
 
 const app = express();
-
 // Application-Level Middleware
 
 app.use(cors());
