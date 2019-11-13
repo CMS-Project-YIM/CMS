@@ -4,10 +4,22 @@ const user = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       unique: true,
     },
+    passWord: {
+      type: DataTypes.STRING,
+      unique: true,
+    },
+    name: {
+      type: DataTypes.STRING,
+    },
+    email: {
+      type: DataTypes.STRING,
+      unique: true,
+    },
   });
 
-  User.associate = models => {
-    User.hasMany(models.Message, { onDelete: 'CASCADE' });
+  User.associate = (models) => {
+    // User.hasMany(models.Message, { onDelete: 'CASCADE' });
+    User.belongsTo(models.UserTypes, { onDelete: 'CASCADE', foreignKey: 'userTypeId' });
   };
 
   User.findByLogin = async login => {

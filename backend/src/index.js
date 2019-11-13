@@ -3,7 +3,7 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import express from 'express';
 
-import models, { sequelize } from './models';
+import models, {sequelize} from './models';
 import routes from './routes';
 
 const app = express();
@@ -11,16 +11,15 @@ const app = express();
 // Application-Level Middleware
 
 app.use(cors());
-
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(async (req, res, next) => {
-  req.context = {
-    models,
-    me: await models.User.findByLogin('rwieruch'),
-  };
-  next();
+    req.context = {
+        models,
+        me: await models.User.findByLogin('rwieruch'),
+    };
+    next();
 });
 
 // Routes
@@ -33,45 +32,63 @@ app.use('/messages', routes.message);
 
 const eraseDatabaseOnSync = true;
 
-sequelize.sync({ force: eraseDatabaseOnSync }).then(async () => {
-  if (eraseDatabaseOnSync) {
-    createUsersWithMessages();
-  }
+sequelize.sync({force: eraseDatabaseOnSync}).then(async () => {
+    if (eraseDatabaseOnSync) {
+        createUserType();
+        createUsersWithMessages();
 
-  app.listen(process.env.PORT, () =>
-    console.log(`Example app listening on port ${process.env.PORT}!`),
-  );
+    }
+
+    app.listen(process.env.PORT, () =>
+        console.log(`Example app listening on port ${process.env.PORT}!`),
+    );
 });
 
-const createUsersWithMessages = async () => {
-  await models.User.create(
-    {
-      username: 'rwieruch',
-      messages: [
+const createUserType = async () => {
+    await models.UserTypes.create(
         {
-          text: 'Published the Road to learn React',
+            types: 'admin',
         },
-      ],
-    },
-    {
-      include: [models.Message],
-    },
-  );
+    );
 
-  await models.User.create(
-    {
-      username: 'ddavids',
-      messages: [
+    await models.UserTypes.create(
         {
-          text: 'Happy to release ...',
+            types: 'editor',
+        },
+    );
+
+    await models.UserTypes.create(
+        {
+            types: 'subscription',
+        },
+    );
+};
+
+//issue-43
+const createUsersWithMessages = async () => {
+    await models.User.create(
+        {
+            username: 'NS',
+            passWord: 'NS290821',
+            name: 'Narawich Saphimarn',
+            email: 'NarawichSaphimarn@gmail.com',
+            userTypeId: 1,
         },
         {
-          text: 'Published a complete ...',
+            include: [models.UserTypes],
         },
-      ],
-    },
-    {
-      include: [models.Message],
-    },
-  );
+    );
+
+    await models.User.create(
+        {
+            username: 'NSm',
+            passWord: 'NS290821m',
+            name: 'Narawich Saphimarnm',
+            email: 'NarawichSaphimarn@gmail.comm',
+            userTypeId: 2,
+        },
+        {
+            include: [models.UserTypes],
+        },
+    );
 };
