@@ -12,7 +12,7 @@ const sequelize = new Sequelize(
 const models = {
   User: sequelize.import('./user'),
   Message: sequelize.import('./message'),
-  UserTypes: sequelize.import('./userType')
+  userTypes: sequelize.import('./userType')
 };
 
 Object.keys(models).forEach(key => {

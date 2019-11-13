@@ -1,16 +1,16 @@
-const userType = (sequelize, DataTypes) => {
-    const UserTypes = sequelize.define('userType', {
+const usertypes = (sequelize, DataTypes) => {
+    const userTypes = sequelize.define('usertypes', {
         types: {
             type: DataTypes.STRING,
             unique: true,
         },
     })
 
-    UserTypes.associate = (models) => {
-        UserTypes.hasMany(models.User, {foreignKey: 'userTypeId', as: 'users'});
+    userTypes.associate = (models) => {
+        userTypes.hasMany(models.User);
     };
 
-    return UserTypes;
+    return userTypes;
 }
 
-export default userType
+export default usertypes
