@@ -63,6 +63,7 @@ const createUserType = async () => {
     );
 };
 
+//issue-43
 const createUsersWithMessages = async () => {
     await models.User.create(
         {
