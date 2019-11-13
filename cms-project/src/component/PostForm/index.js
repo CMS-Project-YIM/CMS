@@ -1,6 +1,7 @@
 import { Form, Row, Col, Input, Button, Select } from "antd";
 import React from "react";
 import UploadForm from "./UploadForm";
+import Preview from "./postPreview";
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -8,7 +9,8 @@ const { Option } = Select;
 class PostForm extends React.Component {
   constructor() {
     super();
-    this.state = { optionValue: [] };
+    this.state = { selectedValue: ["Value1", "Value2", "Value3"] };
+    this.child = React.createRef();
   }
   handleSubmit = e => {
     e.preventDefault();
@@ -26,24 +28,26 @@ class PostForm extends React.Component {
     }
   };
 
-  handleTopic = e => {
-    this.setState({ topicName: e.target.value });
-  };
+  handleTextChange = e => {
+    const name = e.target.name;
+    const value = e.target.value;
 
-  handleTopicContent = e => {
-    this.setState({ topicContent: e.target.value });
+    this.setState({ [name]: value });
   };
 
   handleSelectChange = e => {
-    this.setState({ topicType: e });
+    this.setState({ type: e });
   };
 
   componentDidMount() {
     //รอรับค่าจาก prop เพื่อเอามาใส่ใน select option
   }
 
+  handlePreview = () => {
+    this.child.current.handleModal();
+  };
+
   render() {
-    const { optionValue } = this.state;
     return (
       <div>
         <Form layout="horizontal" onSubmit={this.handleSubmit}>
@@ -52,7 +56,8 @@ class PostForm extends React.Component {
               <Form.Item>
                 <Input
                   placeholder="Topic"
-                  onChange={this.handleTopic}
+                  name="title"
+                  onChange={this.handleTextChange}
                   required
                 />
               </Form.Item>
@@ -63,7 +68,7 @@ class PostForm extends React.Component {
                   onChange={this.handleSelectChange}
                   placeholder="Select Topic Type"
                 >
-                  {optionValue.map((item, index) => (
+                  {this.state.selectedValue.map((item, index) => (
                     <Option value={item} key={index}>
                       {item}
                     </Option>
@@ -81,16 +86,36 @@ class PostForm extends React.Component {
             <TextArea
               placeholder="Type Content Here"
               rows={6}
-              onChange={this.handleTopicContent}
+              name="content"
+              onChange={this.handleTextChange}
               required
             />
           </Form.Item>
           <Form.Item>
-            <Button type="primary" htmlType="submit">
-              Post
-            </Button>
+            <Row>
+              <Col span={2}>
+                <Button type="primary" htmlType="submit">
+                  Post
+                </Button>
+              </Col>
+              <Col>
+                <Button
+                  type="secondary"
+                  htmlType="button"
+                  onClick={this.handlePreview}
+                >
+                  Preview
+                </Button>
+              </Col>
+            </Row>
           </Form.Item>
         </Form>
+        <Preview
+          ref={this.child}
+          title={this.state.title}
+          type={this.state.type}
+          content={this.state.content}
+        />
       </div>
     );
   }
