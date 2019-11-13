@@ -24,13 +24,13 @@
     display: none;
     cursor: pointer;
 }
-.layoutContainer{
+/* .layoutContainer{
     width: 100%;
     min-width: 100vh;
     height: 100%;
     min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.808);
-}
+} */
 .active{
     width: 100px;
     color: white;

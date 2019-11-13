@@ -186,6 +186,7 @@ class Message extends React.Component {
             collapsed: false,
             size: 'large',
             showComment: false,
+            dataId: [],
         };
         this.onShowComment = this.onShowComment.bind(this)
     }
@@ -194,6 +195,7 @@ class Message extends React.Component {
     };
     onShowComment = e => {
         console.log(e)
+        const idName = "comment-list" + e;
         var showComments = this.state.showComment
         showComments = !showComments;
         this.setState({ showComment : !this.state.showComment });
@@ -201,11 +203,11 @@ class Message extends React.Component {
             document.getElementById('SpinPanel').style.display = "block";
             const stateComment = setTimeout(() => {
                 document.getElementById('SpinPanel').style.display = "none";
-                document.getElementById('comment-list' + e).style.display = "block";
+                document.getElementById(idName).style.display = "block";
             }, 1000);
         }
         else {
-            document.getElementById('comment-list' + e).style.display = "none";
+            document.getElementById(idName).style.display = "none";
         }
         this.setState({ showComment : showComments})
     }
@@ -223,7 +225,7 @@ class Message extends React.Component {
     render() {
         const { size } = this.state;
         return(
-            <Layout style={{ minHeight: '100vh' }} class="layoutContainer">
+            <Layout style={{ minHeight: '100vh' }} className="layoutContainer">
                 <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse} className="SiderContainer">
                     <div className="logo" />
                     <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
