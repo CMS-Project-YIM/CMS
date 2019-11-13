@@ -36,7 +36,6 @@ sequelize.sync({force: eraseDatabaseOnSync}).then(async () => {
     if (eraseDatabaseOnSync) {
         createUserType();
         createUsersWithMessages();
-
     }
 
     app.listen(process.env.PORT, () =>
@@ -45,19 +44,19 @@ sequelize.sync({force: eraseDatabaseOnSync}).then(async () => {
 });
 
 const createUserType = async () => {
-    await models.UserTypes.create(
+    await models.userTypes.create(
         {
             types: 'admin',
         },
     );
 
-    await models.UserTypes.create(
+    await models.userTypes.create(
         {
             types: 'editor',
         },
     );
 
-    await models.UserTypes.create(
+    await models.userTypes.create(
         {
             types: 'subscription',
         },
@@ -71,10 +70,10 @@ const createUsersWithMessages = async () => {
             passWord: 'NS290821',
             name: 'Narawich Saphimarn',
             email: 'NarawichSaphimarn@gmail.com',
-            userTypeId: 1,
+            usertypeId: 1,
         },
         {
-            include: [models.UserTypes],
+            include: [models.userTypes],
         },
     );
 
@@ -84,10 +83,36 @@ const createUsersWithMessages = async () => {
             passWord: 'NS290821m',
             name: 'Narawich Saphimarnm',
             email: 'NarawichSaphimarn@gmail.comm',
-            userTypeId: 2,
+            usertypeId: 2,
         },
         {
-            include: [models.UserTypes],
+            include: [models.userTypes],
+        },
+    );
+
+    await models.User.create(
+        {
+            username: 'NSmm',
+            passWord: 'NS290821mm',
+            name: 'Narawich Saphimarnmm',
+            email: 'NarawichSaphimarn@gmail.commm',
+            usertypeId: 3,
+        },
+        {
+            include: [models.userTypes],
+        },
+    );
+
+    await models.User.create(
+        {
+            username: 'NSmmm',
+            passWord: 'NS290821mmm',
+            name: 'Narawich Saphimarnmmm',
+            email: 'NarawichSaphimarn@gmail.commmm',
+            usertypeId: 1,
+        },
+        {
+            include: [models.userTypes],
         },
     );
 };

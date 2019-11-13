@@ -19,7 +19,7 @@ const user = (sequelize, DataTypes) => {
 
   User.associate = (models) => {
     // User.hasMany(models.Message, { onDelete: 'CASCADE' });
-    User.belongsTo(models.UserTypes, { onDelete: 'CASCADE', foreignKey: 'userTypeId' });
+    User.belongsTo(models.userTypes, { onDelete: 'CASCADE'});
   };
 
   User.findByLogin = async login => {
