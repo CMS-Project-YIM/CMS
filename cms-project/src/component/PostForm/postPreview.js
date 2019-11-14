@@ -41,7 +41,7 @@ class Preview extends React.Component {
         footer={null}
         onCancel={this.handleModal}
       >
-        <Content className="ContentContainer">
+        <Content>
           <List
             itemLayout="vertical"
             size="large"
