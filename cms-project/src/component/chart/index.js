@@ -56,7 +56,7 @@ class Chartindex extends Component {
                 }
               >
                 <Menu.Item className="optionmenu" key="5">
-                  <Link to="/navbar"> navbar</Link>
+                  <Link to="/navbar"> option 5 </Link>
                 </Menu.Item>
                 <Menu.Item className="optionmenu" key="6">
                   <Link to="/chart"> Dashborad</Link>
