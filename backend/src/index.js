@@ -5,9 +5,9 @@ import express from 'express';
 
 import models, {sequelize} from './models';
 import routes from './routes';
-var apiUser = require("./routes/user");
 
 const app = express();
+
 // Application-Level Middleware
 
 app.use(cors());
@@ -27,6 +27,9 @@ app.use(async (req, res, next) => {
 app.use('/session', routes.session);
 app.use('/users', routes.user);
 app.use('/messages', routes.message);
+app.use('/catagory', routes.catagory);
+app.use('/types', routes.userTypes);
+app.use('/post', routes.postData);
 
 // Start
 
@@ -36,6 +39,7 @@ sequelize.sync({force: eraseDatabaseOnSync}).then(async () => {
     if (eraseDatabaseOnSync) {
         createUserType();
         createUsersWithMessages();
+        createCatagory();
     }
 
     app.listen(process.env.PORT, () =>
@@ -115,5 +119,31 @@ const createUsersWithMessages = async () => {
         {
             include: [models.userTypes],
         },
+    );
+};
+
+const createCatagory = async () => {
+    await models.Catagory.create(
+        {
+            catagorytype: "เรื่องทั่วไป",
+        }
+    );
+
+    await models.Catagory.create(
+        {
+            catagorytype: "เรื่องกีฬา",
+        }
+    );
+
+    await models.Catagory.create(
+        {
+            catagorytype: "เรื่องการศึกษา",
+        }
+    );
+
+    await models.Catagory.create(
+        {
+            catagorytype: "เรื่องความรัก",
+        }
     );
 };

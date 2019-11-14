@@ -1,6 +1,6 @@
 import { Router } from 'express';
 const { pool } = require('../config/config')
-var express = require('express');
+
 var router = Router();
 
 router.get('/getUser/:userId', async (req, res) => {
