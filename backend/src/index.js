@@ -30,6 +30,7 @@ app.use('/messages', routes.message);
 app.use('/catagory', routes.catagory);
 app.use('/types', routes.userTypes);
 app.use('/post', routes.postData);
+app.use('/Gender',routes.gender);
 
 // Start
 
@@ -37,15 +38,29 @@ const eraseDatabaseOnSync = true;
 
 sequelize.sync({force: eraseDatabaseOnSync}).then(async () => {
     if (eraseDatabaseOnSync) {
+        createGender();
         createUserType();
         createUsersWithMessages();
         createCatagory();
+
     }
 
     app.listen(process.env.PORT, () =>
         console.log(`Example app listening on port ${process.env.PORT}!`),
     );
 });
+const createGender = async () => {
+    await models.Gender.create(
+        {
+            gender: 'Male',
+        }
+    ),
+        await models.Gender.create(
+            {
+                gender: 'Female',
+            }
+        )
+};
 
 const createUserType = async () => {
     await models.userTypes.create(
@@ -76,9 +91,13 @@ const createUsersWithMessages = async () => {
             name: 'Narawich Saphimarn',
             email: 'NarawichSaphimarn@gmail.com',
             usertypeId: 1,
+            genderId: 1,
         },
         {
             include: [models.userTypes],
+        },
+        {
+            include: [models.Gender],
         },
     );
 
@@ -89,9 +108,13 @@ const createUsersWithMessages = async () => {
             name: 'Narawich Saphimarnm',
             email: 'NarawichSaphimarn@gmail.comm',
             usertypeId: 2,
+            genderId: 1,
         },
         {
             include: [models.userTypes],
+        },
+        {
+            include: [models.Gender],
         },
     );
 
@@ -102,9 +125,13 @@ const createUsersWithMessages = async () => {
             name: 'Narawich Saphimarnmm',
             email: 'NarawichSaphimarn@gmail.commm',
             usertypeId: 3,
+            genderId: 2,
         },
         {
             include: [models.userTypes],
+        },
+        {
+            include: [models.Gender],
         },
     );
 
@@ -115,9 +142,13 @@ const createUsersWithMessages = async () => {
             name: 'Narawich Saphimarnmmm',
             email: 'NarawichSaphimarn@gmail.commmm',
             usertypeId: 1,
+            genderId: 1,
         },
         {
             include: [models.userTypes],
+        },
+        {
+            include: [models.Gender],
         },
     );
 };
