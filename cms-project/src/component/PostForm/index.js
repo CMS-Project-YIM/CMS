@@ -2,6 +2,7 @@ import { Form, Row, Col, Input, Button, Select } from "antd";
 import React from "react";
 import UploadForm from "./UploadForm";
 import Preview from "./postPreview";
+import axios from "axios";
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -9,22 +10,21 @@ const { Option } = Select;
 class PostForm extends React.Component {
   constructor() {
     super();
-    this.state = { selectedValue: ["Value1", "Value2", "Value3"] };
+    this.state = { selectedValue: [] };
     this.child = React.createRef();
   }
   handleSubmit = e => {
     e.preventDefault();
-    const { topicName, topicContent, topicType } = this.state;
+    const { title, cotent, type } = this.state;
 
-    if (
-      topicContent !== undefined &&
-      topicName !== undefined &&
-      topicType !== undefined
-    ) {
-      this.props.fromPostTopic(topicName);
-      this.props.fromPostContent(topicContent);
-      this.props.fromPostType(topicType);
-      //console.log(topicName, topicContent);
+    if (title !== undefined && cotent !== undefined && type !== undefined) {
+      axios
+        .post("http://localhost:4000/test", {
+          data: this.state.value
+        })
+        .then(res => {
+          this.setState({ text: res.data });
+        });
     }
   };
 
@@ -40,7 +40,16 @@ class PostForm extends React.Component {
   };
 
   componentDidMount() {
-    //รอรับค่าจาก prop เพื่อเอามาใส่ใน select option
+    axios.get("http://localhost:9000/catagory/getCatagory").then(res => {
+      for (let i = 0; i < Object.keys(res.data).length; i++) {
+        this.setState({
+          selectedValue: this.state.selectedValue.concat({
+            id: res.data[i].id,
+            value: res.data[i].catagorytype
+          })
+        });
+      }
+    });
   }
 
   handlePreview = () => {
@@ -69,8 +78,8 @@ class PostForm extends React.Component {
                   placeholder="Select Topic Type"
                 >
                   {this.state.selectedValue.map((item, index) => (
-                    <Option value={item} key={index}>
-                      {item}
+                    <Option value={item.id} key={index.id}>
+                      {item.value}
                     </Option>
                   ))}
                 </Select>
