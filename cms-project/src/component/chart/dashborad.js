@@ -9,10 +9,6 @@ import NewHoriz from "./newhoriz";
 import { Card, CardBody, CardHeader } from "reactstrap";
 import { Row, Col } from "antd";
 import { CustomTooltips } from "@coreui/coreui-plugin-chartjs-custom-tooltips";
-import { getStyle } from "@coreui/coreui/dist/js/coreui-utilities";
-
-const brandPrimary = getStyle("--primary");
-const brandInfo = getStyle("--info");
 
 // Card Chart 1 Data
 const cardChartData1 = {
@@ -253,7 +249,7 @@ class Dashboard extends Component {
       <div className="animated fadeIn">
         <div
           class="row"
-          style={{ paddingLeft: 20, paddingTop: 20, paddingRight: 470 }}
+          style={{ paddingLeft: 20, paddingTop: 15, paddingRight: 470 }}
         >
           <div class="col-sm-6">
             <div class="card">
@@ -272,14 +268,14 @@ class Dashboard extends Component {
           <div class="col-sm-6">
             <div class="card">
               <div class="card-body">
-                <Doughnut />
+                <Piechart />
               </div>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="card">
               <div class="card-body">
-                <Piechart />
+                <Doughnut />
               </div>
             </div>
           </div>

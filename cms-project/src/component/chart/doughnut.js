@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import { Doughnut } from "react-chartjs-2";
+import data from "../chart/data";
+
+const gender = data.gender;
 
 const doughnut = {
-  labels: ["Red", "Green", "Yellow"],
+  labels: ["male", "female"],
   datasets: [
     {
-      data: [300, 50, 100],
-      backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-      hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
+      data: gender,
+      backgroundColor: ["#36A2EB", "#ff4d4f"],
+      hoverBackgroundColor: ["#36A2EB", "#ff4d4f"]
     }
   ]
 };

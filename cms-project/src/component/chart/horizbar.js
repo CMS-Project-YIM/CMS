@@ -1,17 +1,20 @@
 import React from "react";
 import { HorizontalBar } from "react-chartjs-2";
+import Data from "./data.json";
+
+const age = Data.age; //ข้อมูล json มาเก็บในตัวแปร
 
 const bar = {
-  labels: ["January", "February", "March", "April"],
+  labels: age,
   datasets: [
     {
-      label: "My First dataset",
-      backgroundColor: "rgba(255,99,132,0.2)",
-      borderColor: "rgba(255,99,132,1)",
+      label: "The age range of the person posting",
+      backgroundColor: "#1890ff",
+      borderColor: "#1890ff",
       borderWidth: 1,
-      hoverBackgroundColor: "rgba(255,99,132,0.4)",
-      hoverBorderColor: "rgba(255,99,132,1)",
-      data: [81, 56, 55, 40, 0]
+      hoverBackgroundColor: "#1890ff",
+      hoverBorderColor: "#1890ff",
+      data: [81, 56, 55, 40, 0] //ข้อมูลแสดงผล
     }
   ]
 };

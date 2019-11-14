@@ -1,17 +1,26 @@
 import React, { Component } from "react";
-import { Bar, HorizontalBar } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
 const bar = {
-  labels: ["January", "February", "March", "April", "May", "June", "July"],
+  labels: [
+    //ชื่อ catagory
+    "catagory1",
+    "catagory2",
+    "catagory3",
+    "catagory4",
+    "catagory5",
+    "catagory6",
+    "catagory7"
+  ],
   datasets: [
     {
-      label: "My First dataset",
-      backgroundColor: "rgba(255,99,132,0.2)",
+      label: "The number of posts of each catagory",
+      backgroundColor: "#ff4d4f",
       borderColor: "rgba(255,99,132,1)",
       borderWidth: 1,
-      hoverBackgroundColor: "rgba(255,99,132,0.4)",
+      hoverBackgroundColor: "#ff4d4f",
       hoverBorderColor: "rgba(255,99,132,1)",
-      data: [65, 59, 80, 81, 56, 55, 40, 0]
+      data: [65, 59, 80, 81, 56, 55, 40, 0] //ข้อมูลแสดงผล
     }
   ]
 };
