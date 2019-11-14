@@ -4,13 +4,13 @@ const usertypes = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             unique: true,
         },
-    })
+    });
 
     userTypes.associate = (models) => {
         userTypes.hasMany(models.User);
     };
 
     return userTypes;
-}
+};
 
 export default usertypes
