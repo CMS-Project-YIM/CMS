@@ -4,7 +4,7 @@ import message from './message';
 import catagory from './catagory';
 import userTypes from './userType';
 import postData from './postData';
-
+import gender from "./gender";
 export default {
   session,
   user,
@@ -12,4 +12,5 @@ export default {
   catagory,
   userTypes,
   postData,
+  gender,
 };

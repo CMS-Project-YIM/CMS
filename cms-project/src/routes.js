@@ -8,7 +8,7 @@ import Message from "./component/message/index";
 import Navbar from "./component/navbar/navbar";
 import Login from "./component/login/login";
 import PostForm from "./component/PostForm";
-
+import Usermanage from "./component/usersmanage";
 const Routes = props => (
   <Router {...props}>
     <Route path="/" component={App} />
@@ -18,7 +18,9 @@ const Routes = props => (
     <Route path="/message" component={Message} />
     <Route path="/navbar" component={Navbar} />
     <Route path="/login" component={Login} />
+    <Route path="/usermanage" component={Usermanage} />
     <Route path="/PostForm" component={PostForm} />
+
   </Router>
 );
 
