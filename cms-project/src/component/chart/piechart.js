@@ -2,7 +2,16 @@ import React, { Component } from "react";
 import { Pie } from "react-chartjs-2";
 
 const pie = {
-  labels: ["Red", "Blue", "Yellow", "Green", "purple", "Gray"],
+  //ชื่อ catagory
+  labels: [
+    "catagory1",
+    "catagory2",
+    "catagory3",
+    "catagory4",
+    "catagory5",
+    "catagory6"
+  ],
+
   datasets: [
     {
       data: [100, 80, 70, 60, 33, 20],

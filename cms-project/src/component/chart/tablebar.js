@@ -45,7 +45,7 @@ const columns = [
 class Tablebar extends Component {
   render() {
     return (
-      <div>
+      <div style={{ paddingTop: 50 }}>
         <Table columns={columns} dataSource={dataSource} bordered />
       </div>
     );
