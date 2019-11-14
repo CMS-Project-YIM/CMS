@@ -14,18 +14,17 @@ class PostForm extends React.Component {
     this.child = React.createRef();
   }
   handleSubmit = e => {
-    e.preventDefault();
-    const { title, cotent, type } = this.state;
+    const { title, content, catagoryId } = this.state;
 
-    if (title !== undefined && cotent !== undefined && type !== undefined) {
-      axios
-        .post("http://localhost:4000/test", {
-          data: this.state.value
-        })
-        .then(res => {
-          this.setState({ text: res.data });
-        });
-    }
+    axios
+      .post("http://localhost:9000/post/postPost", {
+        title: title,
+        content: content,
+        catagoryId: catagoryId
+      })
+      .then(res => {
+        console.log("");
+      });
   };
 
   handleTextChange = e => {
@@ -36,7 +35,7 @@ class PostForm extends React.Component {
   };
 
   handleSelectChange = e => {
-    this.setState({ type: e });
+    this.setState({ catagoryId: e });
   };
 
   componentDidMount() {
@@ -100,14 +99,16 @@ class PostForm extends React.Component {
               required
             />
           </Form.Item>
-          <Form.Item>
-            <Row>
-              <Col span={2}>
+          <Row>
+            <Col span={2}>
+              <Form.Item>
                 <Button type="primary" htmlType="submit">
                   Post
                 </Button>
-              </Col>
-              <Col>
+              </Form.Item>
+            </Col>
+            {/* <Col>
+              <Form.Item>
                 <Button
                   type="secondary"
                   htmlType="button"
@@ -115,9 +116,9 @@ class PostForm extends React.Component {
                 >
                   Preview
                 </Button>
-              </Col>
-            </Row>
-          </Form.Item>
+              </Form.Item>
+            </Col>*/}
+          </Row>
         </Form>
         <Preview
           ref={this.child}
