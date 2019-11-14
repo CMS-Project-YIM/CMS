@@ -1,0 +1,10 @@
+
+.ContentContainer{
+    padding: 20px;
+    margin-left: 200px;
+    position: fixed;
+    z-index: 1500;
+    height: 100vh;
+    opacity: 0.9;
+    background-color: azure;
+}
