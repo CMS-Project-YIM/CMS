@@ -16,15 +16,15 @@ class PostForm extends React.Component {
   handleSubmit = e => {
     const { title, content, catagoryId } = this.state;
 
-    axios
-      .post("http://localhost:9000/post/postPost", {
+    fetch("http://localhost:9000/post/postPost", {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
         title: title,
         content: content,
         catagoryId: catagoryId
       })
-      .then(res => {
-        console.log("");
-      });
+    });
   };
 
   handleTextChange = e => {
