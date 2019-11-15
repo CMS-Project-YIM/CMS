@@ -11,7 +11,7 @@ const pie = {
     "catagory5",
     "catagory6"
   ],
-
+  //
   datasets: [
     {
       data: [100, 80, 70, 60, 33, 20],

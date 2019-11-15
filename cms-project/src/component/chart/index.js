@@ -8,7 +8,7 @@ import { Link } from "react-router";
 
 const { SubMenu } = Menu;
 const { Sider } = Layout;
-
+//
 class Chartindex extends Component {
   render() {
     return (

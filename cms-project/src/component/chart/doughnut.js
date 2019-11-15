@@ -21,7 +21,7 @@ class doughtnut extends Component {
   //     this.setState({ data: [res.data[0].gender, res.data[1].gender] });
   //   });
   // }
-
+  //
   componentDidMount() {
     this.getNameGender();
     this.getUser();
