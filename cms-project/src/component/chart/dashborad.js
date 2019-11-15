@@ -9,6 +9,7 @@ import NewHoriz from "./newhoriz";
 import { Card, CardBody, CardHeader } from "reactstrap";
 import { Row, Col } from "antd";
 import { CustomTooltips } from "@coreui/coreui-plugin-chartjs-custom-tooltips";
+import User from "../usersmanage";
 
 // Card Chart 1 Data
 const cardChartData1 = {
@@ -370,6 +371,7 @@ class Dashboard extends Component {
               <Tablebar />
             </CardBody>
           </Card>
+          <User />
         </Col>
       </div>
     );
