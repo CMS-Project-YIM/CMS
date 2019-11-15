@@ -2,7 +2,6 @@ import { Form, Row, Col, Input, Button, Select } from "antd";
 import React from "react";
 import UploadForm from "./UploadForm";
 import Preview from "./postPreview";
-import axios from "axios";
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -39,16 +38,18 @@ class PostForm extends React.Component {
   };
 
   componentDidMount() {
-    axios.get("http://localhost:9000/catagory/getCatagory").then(res => {
-      for (let i = 0; i < Object.keys(res.data).length; i++) {
-        this.setState({
-          selectedValue: this.state.selectedValue.concat({
-            id: res.data[i].id,
-            value: res.data[i].catagorytype
-          })
-        });
-      }
-    });
+    fetch("http://localhost:9000/catagory/getCatagory")
+      .then(response => response.json())
+      .then(res => {
+        for (let i = 0; i < Object.keys(res).length; i++) {
+          this.setState({
+            selectedValue: this.state.selectedValue.concat({
+              id: res[i].id,
+              value: res[i].catagorytype
+            })
+          });
+        }
+      });
   }
 
   handlePreview = () => {
