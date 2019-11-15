@@ -2,7 +2,6 @@ import { Form, Row, Col, Input, Button, Select } from "antd";
 import React from "react";
 import UploadForm from "./UploadForm";
 import Preview from "./postPreview";
-import axios from "axios";
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -14,18 +13,17 @@ class PostForm extends React.Component {
     this.child = React.createRef();
   }
   handleSubmit = e => {
-    e.preventDefault();
-    const { title, cotent, type } = this.state;
+    const { title, content, catagoryId } = this.state;
 
-    if (title !== undefined && cotent !== undefined && type !== undefined) {
-      axios
-        .post("http://localhost:4000/test", {
-          data: this.state.value
-        })
-        .then(res => {
-          this.setState({ text: res.data });
-        });
-    }
+    fetch("http://localhost:9000/post/postPost", {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        title: title,
+        content: content,
+        catagoryId: catagoryId
+      })
+    });
   };
 
   handleTextChange = e => {
@@ -36,20 +34,22 @@ class PostForm extends React.Component {
   };
 
   handleSelectChange = e => {
-    this.setState({ type: e });
+    this.setState({ catagoryId: e });
   };
 
   componentDidMount() {
-    axios.get("http://localhost:9000/catagory/getCatagory").then(res => {
-      for (let i = 0; i < Object.keys(res.data).length; i++) {
-        this.setState({
-          selectedValue: this.state.selectedValue.concat({
-            id: res.data[i].id,
-            value: res.data[i].catagorytype
-          })
-        });
-      }
-    });
+    fetch("http://localhost:9000/catagory/getCatagory")
+      .then(response => response.json())
+      .then(res => {
+        for (let i = 0; i < Object.keys(res).length; i++) {
+          this.setState({
+            selectedValue: this.state.selectedValue.concat({
+              id: res[i].id,
+              value: res[i].catagorytype
+            })
+          });
+        }
+      });
   }
 
   handlePreview = () => {
@@ -100,14 +100,16 @@ class PostForm extends React.Component {
               required
             />
           </Form.Item>
-          <Form.Item>
-            <Row>
-              <Col span={2}>
+          <Row>
+            <Col span={2}>
+              <Form.Item>
                 <Button type="primary" htmlType="submit">
                   Post
                 </Button>
-              </Col>
-              <Col>
+              </Form.Item>
+            </Col>
+            {/* <Col>
+              <Form.Item>
                 <Button
                   type="secondary"
                   htmlType="button"
@@ -115,9 +117,9 @@ class PostForm extends React.Component {
                 >
                   Preview
                 </Button>
-              </Col>
-            </Row>
-          </Form.Item>
+              </Form.Item>
+            </Col>*/}
+          </Row>
         </Form>
         <Preview
           ref={this.child}

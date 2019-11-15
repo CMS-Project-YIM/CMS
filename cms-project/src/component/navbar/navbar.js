@@ -54,7 +54,7 @@ class navbar extends Component {
                 }
               >
                 <Menu.Item className="optionmenu" key="5">
-                  option5
+                  <Link to="/PostForm"> Post</Link>
                 </Menu.Item>
                 <Menu.Item className="optionmenu" key="6">
                   <Link to="/chart"> Dashborad</Link>
