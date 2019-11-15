@@ -51,5 +51,5 @@ class Tablebar extends Component {
     );
   }
 }
-
+//
 export default Tablebar;

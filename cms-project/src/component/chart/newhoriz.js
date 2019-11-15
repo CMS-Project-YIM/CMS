@@ -24,7 +24,7 @@ const bar = {
     }
   ]
 };
-
+//
 class newhoriz extends React.Component {
   render() {
     return (
