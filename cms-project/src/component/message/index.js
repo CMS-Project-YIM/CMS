@@ -133,7 +133,7 @@ class Message extends React.Component {
         console.log("datapost",datapost)
         console.log("dataComment", dataComment)
         return(
-            <Layout style={{ minHeight: '100vh' }} className="layoutContainer">
+            <Layout style={{ minHeight: '100vh', minWidth: '100vh' }} className="layoutContainer">
                 <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse} className="SiderContainer">
                     <Menu defaultSelectedKeys={['0']} mode="inline">
                         {itemsCatagory}
