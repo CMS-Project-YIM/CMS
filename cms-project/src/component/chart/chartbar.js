@@ -13,7 +13,7 @@ export class Chartbar extends Component {
   componentDidMount() {
     this.getCatagory();
   }
-
+  //
   //getNamecatalog
   getCatagory = () => {
     fetch(getNameCatagory)

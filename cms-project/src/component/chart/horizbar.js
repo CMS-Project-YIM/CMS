@@ -18,7 +18,7 @@ const bar = {
     }
   ]
 };
-
+//
 class horizbar extends React.Component {
   render() {
     return (

@@ -69,7 +69,7 @@ const cardChartOpts1 = {
     }
   }
 };
-
+//
 // Card Chart 2 Data
 const cardChartData2 = {
   labels: ["January", "February", "March", "April", "May", "June", "July"],
