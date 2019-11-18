@@ -175,9 +175,6 @@ class Message extends React.Component {
                                             <span style={{ paddingLeft: 8, cursor: 'auto', color: "yellowgreen" }}>{dataComment.length}</span>
                                             <Spin style={{marginLeft: "10px", display: "none"}} id={"SpinPanel" + item.title} />
                                         </div>,
-                                        //<Button type="link" size={size} icon="star" key="list-vertical-star-o" className="btnPanel" >star</Button>,
-                                        //<Button type="link" size={size} icon="like" key="1" className="btnPanel" >like</Button>,
-                                        //<Button type="link" size={size} icon="message" key={item.title} className="btnPanel" value={item.title} onClick={() => this.onShowComment(item.title)}>message</Button>,
                                         <List
                                             id={"comment-list" + item.title}
                                             className="comment-list"
