@@ -36,35 +36,33 @@ class Loginform extends Component {
     }
   }
 
-  componentDidMount = () => {
-    firebase.auth().onAuthStateChanged(user => {
-      this.setState({ isSignedIn: !!user })
-      // this.setState({ auth: firebase.auth().currentUser.uid})
-      localStorage.setItem('img',user.photoURL)
-      localStorage.setItem('name',user.displayName)
-      
-    
-     
-        fetch("http://localhost:9000/users/postUser" , {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            uidUser: firebase.auth().currentUser.uid,
-            username: firebase.auth().currentUser.displayName,
-            email: firebase.auth().currentUser.email,
-            profilePicture: firebase.auth().currentUser.photoURL,
-
-          })
+  createUser = async (a,b,c,d) => {
+    await fetch("http://localhost:9000/users/postUser" , {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          uidUser: a,
+          username: b,
+          email: c,
+          profilePicture: d,
         })
-        .then(res => res.json())
-        .then(res => this.setState({data : res})
-        )
-        .catch(err => err);
-        localStorage.setItem('id',this.state.data)
-      
+      })
+      .then(req => req.json())
+      .then(req => console.log("req", req))
+      .catch(err => console.log("err",err));  
+  }
+
+  componentDidMount = () => {
+    console.log("will mount")
+    firebase.auth().onAuthStateChanged(user => {
+      console.log("user",user)
+      this.setState({ isSignedIn: !!user })
+      localStorage.setItem('img',user.photoURL)
+      localStorage.setItem('name',user.displayName)  
+      this.createUser(firebase.auth().currentUser.uid,firebase.auth().currentUser.displayName, firebase.auth().currentUser.email, firebase.auth().currentUser.photoURL);       
     })
   }
  
@@ -82,7 +80,7 @@ class Loginform extends Component {
           <h2 className ="title">Login</h2>
     
         {this.state.isSignedIn ? (
-          window.location.replace("/navbar"),
+          // window.location.replace("/navbar"),
           <div></div>
           // <span>
         //     <div className="fontsignedin">Signed In!</div>
@@ -110,7 +108,6 @@ class Loginform extends Component {
             <StyledFirebaseAuth
               uiConfig={this.uiConfig}
               firebaseAuth={firebase.auth()}
-              
             />
           )}
       </div>

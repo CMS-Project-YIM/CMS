@@ -20,15 +20,15 @@ router.get("/getUser", async (req, res, next) => {
    })
 });
 
-router.post("/postUser", async(req, res) =>{
- console.log(req)
- const data = await req.context.models.User.create({
-  uidUser: req.body.uidUser,
-  username: req.body.username,
-  email: req.body.email,
-  profilePicture: req.body.profilePicture,
-});
-return res.status(200).json(data)
+router.post("/postUser", async(req, res, next) =>{
+  console.log(req)
+  const data = await req.context.models.User.create({
+    uidUser: req.body.uidUser,
+    username: req.body.username,
+    email: req.body.email,
+    profilePicture: req.body.profilePicture,
+  });
+  return res.json(data)
 });
 
 export default router;
