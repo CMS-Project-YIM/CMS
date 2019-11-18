@@ -80,7 +80,7 @@ class Loginform extends Component {
           <h2 className ="title">Login</h2>
     
         {this.state.isSignedIn ? (
-          // window.location.replace("/navbar"),
+          window.location.replace("/navbar"),
           <div></div>
           // <span>
         //     <div className="fontsignedin">Signed In!</div>
