@@ -9,6 +9,7 @@ import Navbar from "./component/navbar/navbar";
 import Login from "./component/login/login";
 import PostForm from "./component/PostForm";
 import Usermanage from "./component/usersmanage";
+import Loginform from "./component/loginform/loginform";
 const Routes = props => (
   <Router {...props}>
     <Route path="/" component={App} />
@@ -20,6 +21,7 @@ const Routes = props => (
     <Route path="/login" component={Login} />
     <Route path="/usermanage" component={Usermanage} />
     <Route path="/PostForm" component={PostForm} />
+    <Route path="/loginform" component={Loginform} />
 
   </Router>
 );

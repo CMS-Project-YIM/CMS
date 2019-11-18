@@ -6,9 +6,15 @@
   float: left;
   font-size: 30px;
   color: white;
-  margin: 10px 50px;
+  margin: 10px 10px;
 }
 .textheader2 {
+  float: right;
+  font-size: 20px;
+  color: white;
+  margin: 15px 10px;
+}
+.buttonlogout{
   float: right;
   font-size: 20px;
   color: white;
@@ -46,3 +52,23 @@
   min-height: 100em;
   margin-top: 60px;
 }
+.propicture{
+  width: 3%;
+  text-align: right;
+  float: right;
+  border-radius: 100%;
+  align-content: center;
+  margin-top: calc((60px - 3%) / 2);
+}
+/* .cardpicture{
+  height: 100%;
+  width: 100%;
+  display: inline;
+  background-color: white;
+}
+.cardName{
+  height: 100%;
+  width: 100%;
+  display: inline;
+  background-color: white;
+} */
