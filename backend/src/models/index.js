@@ -12,7 +12,6 @@ const sequelize = new Sequelize(
 const models = {
   Gender : sequelize.import('./gender'),
   User: sequelize.import('./user'),
-  Message: sequelize.import('./message'),
   userTypes: sequelize.import('./userType'),
   Catagory: sequelize.import('./catagory'),
   PostData: sequelize.import('./postdata')

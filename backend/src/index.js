@@ -26,7 +26,6 @@ app.use(async (req, res, next) => {
 
 app.use('/session', routes.session);
 app.use('/users', routes.user);
-app.use('/messages', routes.message);
 app.use('/catagory', routes.catagory);
 app.use('/types', routes.userTypes);
 app.use('/post', routes.postData);

@@ -20,7 +20,7 @@ class Loginform extends Component {
   
   state = {
     isSignedIn: false,
-    user: []
+    data: "",
   }
   uiConfig = {
     signInFlow: "popup",
@@ -39,16 +39,40 @@ class Loginform extends Component {
   componentDidMount = () => {
     firebase.auth().onAuthStateChanged(user => {
       this.setState({ isSignedIn: !!user })
-      console.log("user", user)
+      // this.setState({ auth: firebase.auth().currentUser.uid})
       localStorage.setItem('img',user.photoURL)
       localStorage.setItem('name',user.displayName)
-      this.setState({ user: user })
+      
+    
+     
+        fetch("http://localhost:9000/users/postUser" , {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            uidUser: firebase.auth().currentUser.uid,
+            username: firebase.auth().currentUser.displayName,
+            email: firebase.auth().currentUser.email,
+            profilePicture: firebase.auth().currentUser.photoURL,
+
+          })
+        })
+        .then(res => res.json())
+        .then(res => this.setState({data : res})
+        )
+        .catch(err => err);
+        localStorage.setItem('id',this.state.data)
       
     })
   }
  
 
   render() {
+    // const auth = this.state.auth
+    // if(auth) console.log("auth = ", typeof auth)
+    
     return (
       
       <div className="App">
