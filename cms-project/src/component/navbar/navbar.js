@@ -1,23 +1,58 @@
 import React, { PropTypes, Component } from "react";
 import "./style.css";
-import { Layout, Menu, Button, Icon } from "antd";
-//import Chart from "../chart/";
+import { Layout, Menu, Button, Icon, } from "antd";
 import { Link } from "react-router";
+import auth from '../../firebase/config'
+
+import currentUser from '../../firebase/config'
+import firebase from 'firebase'
+
+require('firebase/auth')
+
 
 const { SubMenu } = Menu;
-const { Sider, Content } = Layout;
+const { Header, Sider, Content } = Layout;
 
 class navbar extends Component {
+  constructor(props){
+  super(props)
+  
+  }
+
+
+  singout = e => {
+    firebase.auth().signOut();
+    window.location.replace("/loginform")
+    // localStorage.clear();
+  };
+  showname = e =>{
+    firebase.auth().currentUser.displayName()
+  }
+
   render() {
+    console.log(firebase.auth());
     return (
       <Layout>
-        <div className="header">
+        <Header className = "header">
           <h2 className="textheader">CMS-Project</h2>
-          <Button type="link" className="textheader2" a href="/login">
+          <Button type = "link" className="buttonlogout" onClick={this.singout}>
             Logout
           </Button>
-          <h2 className="textheader2">Username</h2>
-        </div>
+   
+          <div className = "cardpicture">
+          <img className="propicture"
+              alt="profile picture"
+              src={localStorage.getItem('img')}
+            />
+          </div>
+            <div>
+          <h2 className="textheader2" >{localStorage.getItem('name')}</h2>
+          </div>
+          <div>
+          </div>
+           
+        
+        </Header>
         <Layout className="sildebar">
           <Sider width={200}>
             <Menu
@@ -30,10 +65,11 @@ class navbar extends Component {
             >
               <SubMenu
                 className="submenu"
+               
                 key="sub1"
                 title={
                   <span>
-                    <Icon type="user" /> User
+                   <Icon type="user" />User 
                   </span>
                 }
               >
@@ -54,7 +90,7 @@ class navbar extends Component {
                 }
               >
                 <Menu.Item className="optionmenu" key="5">
-                  <Link to="/PostForm"> Post</Link>
+                  option5
                 </Menu.Item>
                 <Menu.Item className="optionmenu" key="6">
                   <Link to="/chart"> Dashborad</Link>
@@ -81,19 +117,7 @@ class navbar extends Component {
           </Sider>
           <Content>
             <div className="allSide">
-              <h1>1</h1>
-              <h1>2</h1>
-              <h1>3</h1>
-              <h1>4</h1>
-              <h1>5</h1>
-              <h1>6</h1>
-              <h1>7</h1>
-              <h1>8</h1>
-              <h1>9</h1>
-              <h1>10</h1>
-              <h1>11</h1>
-              <h1>12</h1>
-              <h1>13</h1>
+             page
             </div>
           </Content>
         </Layout>
