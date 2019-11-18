@@ -1,34 +1,64 @@
-import { Upload, message, Button, Icon } from "antd";
+import { Spin, Button, Icon } from "antd";
 import React from "react";
 
 class UploadForm extends React.Component {
   constructor() {
     super();
+    this.state = {
+      file: "",
+      imagePreviewUrl: "",
+      loading: false,
+      loadingIcon: "loading"
+    };
   }
 
-  onChange(info) {
-    if (info.file.status !== "uploading") {
-      console.log(info.file, info.fileList);
-    }
-    if (info.file.status === "done") {
-      message.success(`${info.file.name} file uploaded successfully`);
-    } else if (info.file.status === "error") {
-      message.error(`${info.file.name} file upload failed.`);
-    }
-  }
+  onChange = e => {
+    e.preventDefault();
+
+    let reader = new FileReader();
+    let file = e.target.files[0];
+
+    this.setState({ loading: true });
+    reader.onloadend = () => {
+      setTimeout(
+        function() {
+          this.setState({
+            file: file,
+            imagePreviewUrl: reader.result,
+            loadingIcon: "check-circle"
+          });
+        }.bind(this),
+        1000
+      );
+
+      this.props.imageFromChild(this.state.imagePreviewUrl);
+    };
+
+    reader.readAsDataURL(file);
+  };
 
   render() {
     return (
       <div>
-        <Upload
-          name="file"
-          action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+        <input
+          type="file"
           onChange={this.onChange}
-        >
-          <Button>
-            <Icon type="upload" /> Upload Topic Picture
-          </Button>
-        </Upload>
+          accept="image/*"
+          placeholder="Upload"
+          style={{
+            opacity: 0,
+            position: "absolute",
+            zIndex: 1000
+          }}
+        />
+        <Button>
+          <Icon type="upload" /> Upload Topic Picture
+        </Button>{" "}
+        {this.state.loading ? (
+          <Icon style={{ color: " green " }} type={this.state.loadingIcon} />
+        ) : (
+          ""
+        )}
       </div>
     );
   }

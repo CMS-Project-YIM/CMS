@@ -13,7 +13,7 @@ class PostForm extends React.Component {
     this.child = React.createRef();
   }
   handleSubmit = e => {
-    const { title, content, catagoryId } = this.state;
+    const { title, content, catagoryId, imageBase64 } = this.state;
 
     fetch("http://localhost:9000/post/postPost", {
       method: "post",
@@ -22,6 +22,7 @@ class PostForm extends React.Component {
         title: title,
         content: content,
         catagoryId: catagoryId
+        // description: imageBase64
       })
     });
   };
@@ -35,6 +36,11 @@ class PostForm extends React.Component {
 
   handleSelectChange = e => {
     this.setState({ catagoryId: e });
+  };
+
+  handleImageFromChild = e => {
+    var base64result = e.split(",")[1];
+    this.setState({ imageBase64: base64result });
   };
 
   componentDidMount() {
@@ -87,7 +93,7 @@ class PostForm extends React.Component {
             </Col>
             <Col span={4}>
               <Form.Item>
-                <UploadForm />
+                <UploadForm imageFromChild={this.handleImageFromChild} />
               </Form.Item>
             </Col>
           </Row>
