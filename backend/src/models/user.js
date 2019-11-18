@@ -4,17 +4,33 @@ const user = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       unique: true,
     },
-    passWord: {
-      type: DataTypes.STRING,
-      unique: true,
-    },
-    name: {
-      type: DataTypes.STRING,
-    },
     email: {
       type: DataTypes.STRING,
       unique: true,
     },
+    profilePicture: {
+      type: DataTypes.STRING,
+      unique: true,
+    },
+    uidUser:{
+      type: DataTypes.STRING,
+      unique: true,
+    },
+  //   username: {
+  //     type: DataTypes.STRING,
+  //     unique: true,
+  //   },
+  //   passWord: {
+  //     type: DataTypes.STRING,
+  //     unique: true,
+  //   },
+  //   name: {
+  //     type: DataTypes.STRING,
+  //   },
+  //   email: {
+  //     type: DataTypes.STRING,
+  //     unique: true,
+  //   },
   });
 
   User.associate = (models) => {

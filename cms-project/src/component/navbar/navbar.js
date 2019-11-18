@@ -23,7 +23,7 @@ class navbar extends Component {
   singout = e => {
     firebase.auth().signOut();
     window.location.replace("/loginform")
-    // localStorage.clear();
+    localStorage.clear();
   };
   showname = e =>{
     firebase.auth().currentUser.displayName()
@@ -48,7 +48,8 @@ class navbar extends Component {
             <div>
           <h2 className="textheader2" >{localStorage.getItem('name')}</h2>
           </div>
-          <div>
+          <div className ="buttonEditer">
+            <Button type = "primary" >ขอสิทธิ์ Editer</Button>
           </div>
            
         

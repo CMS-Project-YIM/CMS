@@ -3,6 +3,7 @@ const { pool } = require('../config/config')
 
 var router = Router();
 
+
 router.get('/getUser/:userId', async (req, res) => {
   const user = await req.context.models.User.findByPk(
     req.params.userId,
@@ -19,4 +20,20 @@ router.get("/getUser", async (req, res, next) => {
    })
 });
 
+router.post("/postUser", async(req, res) =>{
+ console.log(req)
+ const data = await req.context.models.User.create({
+  uidUser: req.body.uidUser,
+  username: req.body.username,
+  email: req.body.email,
+  profilePicture: req.body.profilePicture,
+});
+return res.status(200).json(data)
+});
+
 export default router;
+
+
+
+
+

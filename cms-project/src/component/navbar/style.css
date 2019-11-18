@@ -60,6 +60,9 @@
   align-content: center;
   margin-top: calc((60px - 3%) / 2);
 }
+.buttonEditer{
+  text-align: right;
+}
 /* .cardpicture{
   height: 100%;
   width: 100%;
