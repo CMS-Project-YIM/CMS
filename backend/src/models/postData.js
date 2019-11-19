@@ -10,12 +10,12 @@ const postdata = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
         },
     });
-
     postData.associate = (models) => {
         postData.belongsTo(models.Catagory, { onDelete: 'CASCADE'});
+        postData.belongsTo(models.User,{onDelete: 'CASCADE'});
     };
 
     return postData;
-}
+};
 
 export default postdata;

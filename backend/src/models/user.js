@@ -17,8 +17,8 @@ const user = (sequelize, DataTypes) => {
       // unique: true,
     },
   });
-
   User.associate = (models) => {
+    User.hasMany(models.PostData);
     User.belongsTo(models.Gender, { onDelete: 'CASCADE'});
     User.belongsTo(models.userTypes, { onDelete: 'CASCADE'});
   };
