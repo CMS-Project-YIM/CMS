@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { Component } from "react";
 import './index.css'
-import {Table,Divider,Tag,Button} from 'antd';
+import {Table, Tag, Button, } from 'antd';
+import { Card, CardBody, CardHeader } from "reactstrap";
 
 
-class Usermanage extends React.Component {
+class Usermanage extends Component {
     constructor(props){
         super(props);
         this.state = {
         }
     };
-
+    handleView = (id) => {
+        window.location.replace("/viewuser/"+id);
+    };
     columns = [
         {
             title: 'Name',
@@ -43,13 +46,13 @@ class Usermanage extends React.Component {
         },
         {
             title: 'Action',
-            key: 'action',
-            render: () => (
+            key: 'id',
+            dataIndex: 'id',
+            render: (record) => (
                 <span>
-                     <Button type="primary" >
+                      <Button  onClick={e => this.handleView(record)} type="primary" >
                          View Profile
                      </Button>
-                    <Divider type="vertical" />
             </span>
             ),
         },
@@ -70,10 +73,14 @@ class Usermanage extends React.Component {
     render() {
         return(
             <div>
-                <Table columns={this.columns} dataSource={this.state.dataApi}>
-                </Table>
+                <Card>
+                    <CardHeader>Users</CardHeader>
+                    <CardBody>
+                        <Table columns={this.columns} dataSource={this.state.dataApi}>
+                        </Table>
+                    </CardBody>
+                </Card>
             </div>
-
         )
     }
 }

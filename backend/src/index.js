@@ -47,7 +47,7 @@ sequelize.sync({force: eraseDatabaseOnSync}).then(async () => {
         createUserType();
         createUsersWithMessages();
         createCatagory();
-
+        createPostData();
     }
 
     app.listen(process.env.PORT, () =>
@@ -91,62 +91,23 @@ const createUserType = async () => {
 const createUsersWithMessages = async () => {
     await models.User.create(
         {
-            username: 'NS',
-            passWord: 'NS290821',
-            name: 'Narawich Saphimarn',
+            username: 'Yongyut Srisuban',
+            email: 'Yongyut120@gmail.com',
+            usertypeId: 1,
+            genderId: 1,
+        },
+        {
+            include: [models.userTypes],
+        },
+        {
+            include: [models.Gender],
+        },
+    );
+    await models.User.create(
+        {
+            username: 'Narawich Saphimarn',
             email: 'NarawichSaphimarn@gmail.com',
-            usertypeId: 1,
-            genderId: 1,
-        },
-        {
-            include: [models.userTypes],
-        },
-        {
-            include: [models.Gender],
-        },
-    );
-
-    await models.User.create(
-        {
-            username: 'NSm',
-            passWord: 'NS290821m',
-            name: 'Narawich Saphimarnm',
-            email: 'NarawichSaphimarn@gmail.comm',
             usertypeId: 2,
-            genderId: 1,
-        },
-        {
-            include: [models.userTypes],
-        },
-        {
-            include: [models.Gender],
-        },
-    );
-
-    await models.User.create(
-        {
-            username: 'NSmm',
-            passWord: 'NS290821mm',
-            name: 'Narawich Saphimarnmm',
-            email: 'NarawichSaphimarn@gmail.commm',
-            usertypeId: 3,
-            genderId: 2,
-        },
-        {
-            include: [models.userTypes],
-        },
-        {
-            include: [models.Gender],
-        },
-    );
-
-    await models.User.create(
-        {
-            username: 'NSmmm',
-            passWord: 'NS290821mmm',
-            name: 'Narawich Saphimarnmmm',
-            email: 'NarawichSaphimarn@gmail.commmm',
-            usertypeId: 1,
             genderId: 1,
         },
         {
@@ -181,5 +142,53 @@ const createCatagory = async () => {
         {
             catagorytype: "เรื่องความรัก",
         }
+    );
+};
+
+const createPostData = async () => {
+    await models.PostData.create(
+        {
+            title: "TestTitle",
+            content: "TestContent",
+            description : "TestDescription",
+            catagoryId: 1,
+            userId: 1,
+        },
+        {
+            include: [models.Catagory],
+        },
+        {
+            include: [models.User],
+        },
+    );
+    await models.PostData.create(
+        {
+            title: "TestTitle2",
+            content: "TestContent2",
+            description : "TestDescription2",
+            catagoryId: 1,
+            userId: 1,
+        },
+        {
+            include: [models.Catagory],
+        },
+        {
+            include: [models.User],
+        },
+    );
+    await models.PostData.create(
+        {
+            title: "TestTitle3",
+            content: "TestContent3",
+            description : "TestDescription3",
+            catagoryId: 1,
+            userId: 2,
+        },
+        {
+            include: [models.Catagory],
+        },
+        {
+            include: [models.User],
+        },
     );
 };
